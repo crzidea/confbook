@@ -439,6 +439,11 @@ Bundle 'git://git.wincent.com/command-t.git'
 " Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
 
+" jsbeautify
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
+map <c-f> :call JsBeautify()<cr>
+
 filetype plugin indent on     " required!
 "
 " Brief help
