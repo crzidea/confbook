@@ -5,3 +5,4 @@ root = true
 [**.js]
 indent_style = space
 indent_size = 2
+jslint_happy = true
