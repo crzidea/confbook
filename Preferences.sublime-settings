@@ -1,6 +1,15 @@
 {
-  "save_on_focus_lost": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "atomic_save": false
+	"highlight_line": true,
+	"caret_style": "solid",
+	"atomic_save": false,
+	"drag_text": false,
+	"font_size": 13,
+	"ignored_packages": [
+		"Javascript Beautify",
+		"Vintage",
+		"SublimeCodeIntel"
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"word_wrap": false
 }
