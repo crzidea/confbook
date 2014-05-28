@@ -1,7 +1,7 @@
 vimrc
 =====
 
-My vimrc with vundle.
+My vimrc with vundle (and SublimeText settings).
 
 ## Install
 
