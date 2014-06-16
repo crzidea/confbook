@@ -427,9 +427,11 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
+Bundle 'jiangmiao/auto-pairs'
+let g:AutoPairsMapCR = 0
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'L9'
@@ -443,7 +445,8 @@ Bundle 'FuzzyFinder'
 " jsbeautify
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
-map <c-f> :call JsBeautify()<cr>
+"map <c-f> :call JsBeautify()<cr>
+map <c-f> <nop>
 
 " neocomplcache setting start
 Bundle 'Shougo/neocomplcache.vim'
@@ -523,7 +526,6 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType javascript setlocal nocindent
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
@@ -561,6 +563,8 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 " neosnippet setting end
+
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on     " required!
 "
