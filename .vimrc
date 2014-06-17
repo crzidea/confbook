@@ -566,6 +566,9 @@ endif
 
 Bundle "pangloss/vim-javascript"
 
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+match OverLength /\%>80v.\+/
+
 filetype plugin indent on     " required!
 "
 " Brief help
