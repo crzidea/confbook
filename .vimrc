@@ -140,13 +140,12 @@ try
 catch
 endtry
 
-set background=dark
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
     set guioptions-=r
+    set guioptions-=L
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
@@ -253,6 +252,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+set autochdir
 
 " Specify the behavior when switching between buffers 
 try
