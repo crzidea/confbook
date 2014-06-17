@@ -158,6 +158,7 @@ set encoding=utf8
 set fileencodings=utf-8,chinese,latin-1  
 if has("win32")  
  set fileencoding=chinese  
+ set guioptions+=a
 else  
  set fileencoding=utf-8  
 endif  
