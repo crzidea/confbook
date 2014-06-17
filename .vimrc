@@ -149,6 +149,7 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Consolas:h12
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -166,7 +167,7 @@ endif
 source $VIMRUNTIME/delmenu.vim  
 source $VIMRUNTIME/menu.vim  
   
-" 解决consle输出乱码  
+" 解决console输出乱码  
 language messages zh_CN.utf-8  
 
 " Use Unix as the standard file type
