@@ -2,6 +2,9 @@
 " Maintainer: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
+"       
+"       Li Xin
+"       http://crzidea.com - micro-tech@foxmail.com
 "
 " Version: 
 "       5.0 - 29/05/12 15:43:36
@@ -149,19 +152,20 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set guifont=Consolas:h12
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Windows下的编码设置
+" Windows下的设置
 set fileencodings=utf-8,chinese,latin-1  
 if has("win32")  
- set fileencoding=chinese  
- set guioptions+=a
+    set fileencoding=chinese  
+    set guioptions+=a
+    set guifont=Consolas:h12
+    winpos 0 0
 else  
- set fileencoding=utf-8  
+    set fileencoding=utf-8  
 endif  
 " 解决菜单乱码  
 source $VIMRUNTIME/delmenu.vim  
