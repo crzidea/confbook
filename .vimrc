@@ -588,8 +588,8 @@ endif
 
 Bundle "pangloss/vim-javascript"
 
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-match OverLength /\%>80v.\+/
+" highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+" match OverLength /\%>80v.\+/
 
 Bundle "othree/html5.vim"
 
