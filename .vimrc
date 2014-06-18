@@ -455,7 +455,7 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'jiangmiao/auto-pairs'
+"Bundle 'jiangmiao/auto-pairs'
 " let g:AutoPairsMapCR = 0
 Bundle 'tpope/vim-fugitive'
 " Bundle 'Lokaltog/vim-easymotion'
@@ -463,14 +463,14 @@ Bundle 'tpope/vim-fugitive'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-Bundle 'honza/vim-snippets'
+Bundle 'crzidea/vim-snippets'
 Bundle 'othree/vim-autocomplpop'
+Bundle 'ervandew/supertab'
 Bundle "othree/html5.vim"
 Bundle "pangloss/vim-javascript"
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
 "map <c-f> :call JsBeautify()<cr>
-map <c-f> <nop>
 
 " vim-scripts repos
 Bundle 'L9'
