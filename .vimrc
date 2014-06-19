@@ -460,11 +460,12 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'ervandew/supertab'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'crzidea/vim-snippets'
+Bundle 'ervandew/supertab'
+"smap <tab> <bs>i<Plug>snipMateNextOrTrigger
 Bundle 'othree/vim-autocomplpop'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
