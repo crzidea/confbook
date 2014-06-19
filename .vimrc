@@ -466,6 +466,7 @@ Bundle "garbas/vim-snipmate"
 Bundle 'crzidea/vim-snippets'
 Bundle 'othree/vim-autocomplpop'
 Bundle 'ervandew/supertab'
+Bundle 'terryma/vim-multiple-cursors'
 Bundle "othree/html5.vim"
 Bundle "pangloss/vim-javascript"
 Bundle 'maksimr/vim-jsbeautify'
