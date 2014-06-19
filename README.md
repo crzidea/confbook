@@ -1,7 +1,9 @@
 vimrc
 =====
 
-My vimrc with vundle (and SublimeText settings).
+My vimrc with vundle (and SublimeText settings. But you will say goodbye to ST after using this .vimrc.).
+
+I am using it with gvim on Windows and vim on Linux.
 
 ## Install
 
