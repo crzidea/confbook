@@ -463,7 +463,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-Bundle 'crzidea/vim-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'ervandew/supertab'
 "smap <tab> <bs>i<Plug>snipMateNextOrTrigger
 Bundle 'othree/vim-autocomplpop'
