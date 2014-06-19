@@ -466,6 +466,8 @@ Bundle "garbas/vim-snipmate"
 Bundle 'crzidea/vim-snippets'
 Bundle 'othree/vim-autocomplpop'
 Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdcommenter'
 Bundle "othree/html5.vim"
