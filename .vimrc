@@ -155,6 +155,7 @@ if has("gui_running")
     set guioptions-=e
     " set t_Co=256
     set guitablabel=%M\ %t
+    imap <C-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>a
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -166,7 +167,6 @@ if has("win32")
     set guioptions+=a
     set guifont=Consolas:h12
     winpos 0 0
-    imap <C-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>i
 else  
     set fileencoding=utf-8  
 endif  
