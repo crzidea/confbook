@@ -155,7 +155,7 @@ if has("gui_running")
     set guioptions-=e
     " set t_Co=256
     set guitablabel=%M\ %t
-    imap <C-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>a
+    imap <c-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>a
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -467,6 +467,7 @@ Bundle 'crzidea/vim-snippets'
 Bundle 'othree/vim-autocomplpop'
 Bundle 'ervandew/supertab'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'scrooloose/nerdcommenter'
 Bundle "othree/html5.vim"
 Bundle "pangloss/vim-javascript"
 Bundle 'maksimr/vim-jsbeautify'
