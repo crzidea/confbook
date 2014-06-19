@@ -153,6 +153,7 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions-=e
+    set guioptions+=a
     " set t_Co=256
     set guitablabel=%M\ %t
     imap <c-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>a
@@ -164,7 +165,6 @@ set encoding=utf8
 " Windows下的设置
 if has("win32")  
     set fileencoding=chinese  
-    set guioptions+=a
     set guifont=Consolas:h12
     winpos 0 0
 else  
