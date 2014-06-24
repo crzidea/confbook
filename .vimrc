@@ -464,9 +464,9 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
+"Bundle 'othree/vim-autocomplpop'
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-g>u\<Tab>"
 Bundle 'ervandew/supertab'
-"smap <tab> <bs>i<Plug>snipMateNextOrTrigger
-Bundle 'othree/vim-autocomplpop'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 Bundle 'terryma/vim-multiple-cursors'
