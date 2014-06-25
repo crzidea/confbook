@@ -465,7 +465,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
 Bundle 'crzidea/vim-autocomplpop'
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-g>u\<Tab>"
+let g:AutoComplPopDontSelectFirst = 1
 Bundle 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
