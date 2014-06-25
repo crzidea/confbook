@@ -462,7 +462,7 @@ Bundle 'tpope/vim-fugitive'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle "crzidea/vim-snipmate"
 Bundle 'honza/vim-snippets'
 Bundle 'crzidea/vim-autocomplpop'
 let g:AutoComplPopDontSelectFirst = 1
