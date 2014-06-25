@@ -464,7 +464,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
-"Bundle 'othree/vim-autocomplpop'
+Bundle 'crzidea/vim-autocomplpop'
 "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-g>u\<Tab>"
 Bundle 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-n>"
