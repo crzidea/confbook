@@ -208,6 +208,7 @@ set tabstop=4
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType lua setlocal shiftwidth=2 tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -322,6 +323,7 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.php :call DeleteTrailingWS()
+autocmd BufWrite *.lua :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.html :call DeleteTrailingWS()
 autocmd BufWrite *.css :call DeleteTrailingWS()
