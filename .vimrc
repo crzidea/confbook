@@ -218,6 +218,7 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set nowrap "Don't wrap lines
+set nonumber "Don't show line numbers
 
 
 """"""""""""""""""""""""""""""
