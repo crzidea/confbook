@@ -474,8 +474,9 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-Plugin 'crzidea/vim-autocomplpop'
+Plugin 'othree/vim-autocomplpop'
 let g:AutoComplPopDontSelectFirst = 1
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 Plugin 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
