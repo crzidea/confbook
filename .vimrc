@@ -153,10 +153,11 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions-=e
-    set guioptions+=a
-    " set t_Co=256
+    "set guioptions+=a
+    "set t_Co=256
     set guitablabel=%M\ %t
-    imap <c-v> <ESC>:set paste<CR>:call paste#Paste()<CR>:set paste!<CR>a
+    vmap <c-c> "*y
+    imap <c-v> <ESC>"*pa
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -426,7 +427,7 @@ endfunction
 function! HasPaste()
     if &paste
         return 'PASTE MODE  '
-    en
+    endif
     return ''
 endfunction
 
