@@ -7,6 +7,8 @@ I am using it with gvim on Windows and vim on Linux.
 
 ## Install
 
+### Linux
+
 ```bash
 git clone https://github.com/crzidea/vimrc.git ~/vimrc 
 cd ~/vimrc/ 
@@ -20,4 +22,12 @@ wget https://raw.github.com/crzidea/vimrc/master/.vimrc -O ~/.vimrc --no-check-c
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 wget https://raw.github.com/crzidea/vimrc/master/.editorconfig -O ~/.vim/.editorconfig --no-check-certificate
 vim +BundleInstall +qall
+```
+
+
+### Windows
+
+```bat
+git clone https://github.com/crzidea/vimrc.git %userprofile%\vimrc
+%userprofile%\vimrc\install.bat
 ```
