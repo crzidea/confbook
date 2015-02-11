@@ -167,6 +167,7 @@ set encoding=utf8
 if has("win32")  
     set fileencoding=chinese  
     set guifont=Consolas:h12
+    set shellslash
     winpos 0 0
 else  
     set fileencoding=utf-8  
