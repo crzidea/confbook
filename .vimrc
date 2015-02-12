@@ -327,14 +327,7 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.php :call DeleteTrailingWS()
-autocmd BufWrite *.lua :call DeleteTrailingWS()
-autocmd BufWrite *.js :call DeleteTrailingWS()
-autocmd BufWrite *.html :call DeleteTrailingWS()
-autocmd BufWrite *.css :call DeleteTrailingWS()
-autocmd BufWrite *.sh :call DeleteTrailingWS()
+autocmd BufWrite * :call DeleteTrailingWS()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ack searching and cope displaying

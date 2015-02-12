@@ -10,8 +10,8 @@ I am using it with gvim on Windows and vim on Linux.
 ### Linux
 
 ```bash
-git clone https://github.com/crzidea/vimrc.git ~/vimrc 
-cd ~/vimrc/ 
+git clone https://github.com/crzidea/vimrc.git ~/vimrc
+cd ~/vimrc/
 ./install.sh
 ```
 
