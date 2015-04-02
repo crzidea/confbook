@@ -136,7 +136,9 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Temporary fix for pangloss/vim-javascript/issues/93
-autocmd FileType javascript setlocal regexpengine=1
+if exists("+regexpengine")
+    autocmd FileType javascript setlocal regexpengine=1
+endif
 
 " Enable syntax highlighting
 syntax enable
