@@ -215,6 +215,7 @@ set tabstop=4
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType lua setlocal shiftwidth=2 tabstop=2
 autocmd FileType sh setlocal shiftwidth=2 tabstop=2
 
@@ -465,7 +466,7 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here:
 "
 " original repos on GitHub
-"Plugin 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs'
 " let g:AutoPairsMapCR = 0
 Plugin 'tpope/vim-fugitive'
 " Plugin 'Lokaltog/vim-easymotion'
