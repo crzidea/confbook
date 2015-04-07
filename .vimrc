@@ -140,6 +140,9 @@ if exists("+regexpengine")
     autocmd FileType javascript setlocal regexpengine=1
 endif
 
+" Syntax for React
+autocmd BufRead,BufNewFile *.jsx setfiletype html
+
 " Enable syntax highlighting
 syntax enable
 
@@ -475,6 +478,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Bundle "justinj/vim-react-snippets"
 Plugin 'othree/vim-autocomplpop'
 let g:AutoComplPopDontSelectFirst = 1
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
