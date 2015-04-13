@@ -187,6 +187,11 @@ source $VIMRUNTIME/menu.vim
 " 解决console输出乱码
 language messages en_US.utf-8
 
+" Modify font size on Mac
+if has('mac')
+    set guifont=Menlo\ Regular:h15
+endif
+
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
@@ -469,7 +474,7 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here:
 "
 " original repos on GitHub
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 " let g:AutoPairsMapCR = 0
 Plugin 'tpope/vim-fugitive'
 " Plugin 'Lokaltog/vim-easymotion'
@@ -489,6 +494,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 "map <c-f> :call JsBeautify()<cr>
