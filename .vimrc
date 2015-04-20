@@ -150,7 +150,9 @@ syntax enable
 "match OverLength /\%>80v.\+/
 
 try
-    colorscheme desert
+    if has('gui')
+        colorscheme evening
+    endif
 catch
 endtry
 
