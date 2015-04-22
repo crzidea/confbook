@@ -1,0 +1,7 @@
+[user]
+	email = lixin18@meituan.com
+	name = Li Xin
+[push]
+	default = simple
+[color]
+	ui = true
