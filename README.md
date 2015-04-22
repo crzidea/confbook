@@ -1,9 +1,12 @@
-vimrc
-=====
+confbook
+========
 
 My vimrc with vundle (and SublimeText settings. But you will say goodbye to ST after using this .vimrc.).
 
 I am using it with gvim on Windows and vim on Linux.
+
+There is something not need in this repo, for example:: `.bash_profile`, `.gitconfig`, etc.
+Just FYI.
 
 ## Install
 
