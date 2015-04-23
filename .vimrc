@@ -75,6 +75,9 @@ command W w !sudo tee % > /dev/null
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+set cursorline
+highlight CursorLine term=bold cterm=bold ctermfg=NONE
+
 " Turn on the WiLd menu
 set wildmenu
 
@@ -129,7 +132,7 @@ set t_vb=
 set tm=500
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+"set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
