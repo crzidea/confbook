@@ -7,10 +7,9 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-DEBUG=mit-api:*,-mit-api:clients
-EDITOR=vim
-
-export PATH DEBUG EDITOR
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export CLICOLOR=1
+export EDITOR=vim
+alias ll='ls -l'
 
 [ -z $TMUX ] && tmux attach
