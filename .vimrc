@@ -482,6 +482,7 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'jiangmiao/auto-pairs'
 " let g:AutoPairsMapCR = 0
 Plugin 'tpope/vim-fugitive'
+Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
