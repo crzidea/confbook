@@ -145,6 +145,8 @@ endif
 
 " Syntax for React
 autocmd BufRead,BufNewFile *.jsx setfiletype html
+" Syntax for template
+autocmd BufRead,BufNewFile *.jst setfiletype html
 
 " Enable syntax highlighting
 syntax enable
