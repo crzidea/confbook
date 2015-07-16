@@ -10,27 +10,33 @@ Just FYI.
 
 ## Install
 
-### Linux
-
 ```bash
-git clone https://github.com/crzidea/vimrc.git ~/vimrc
-cd ~/vimrc/
-./install.sh
+git clone https://github.com/crzidea/confbook.git ~/confbook
 ```
 
-Or:
+### bash
 
-```bash
-wget https://raw.github.com/crzidea/vimrc/master/.vimrc -O ~/.vimrc --no-check-certificate
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-wget https://raw.github.com/crzidea/vimrc/master/.editorconfig -O ~/.vim/.editorconfig --no-check-certificate
-vim +BundleInstall +qall
+Insert below to your ~/.vimrc
+
+```
+source ~/confbook/.bash_profile
 ```
 
+### vim
 
-### Windows
+- Install Vundle:
+    ```
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    ```
+- Insert below to your ~/.vimrc
+    ```
+    source ~/confbook/.vimrc
+    ```
 
-```bat
-git clone https://github.com/crzidea/vimrc.git %userprofile%\vimrc
-%userprofile%\vimrc\install.bat
+### tmux
+
+Insert below to your ~/.vimrc
+
+```
+source-file ~/confbook/.tmux.conf
 ```
