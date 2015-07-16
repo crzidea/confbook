@@ -34,7 +34,7 @@ source ~/confbook/.bash_profile
 
     ```
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginInstall!
+    vim +PluginInstall! +qall
     ```
 
 ### tmux
