@@ -16,7 +16,7 @@ git clone https://github.com/crzidea/confbook.git ~/confbook
 
 ### bash
 
-Insert below to your ~/.vimrc
+Insert below to your ~/.bash_profile
 
 ```
 source ~/confbook/.bash_profile
@@ -24,18 +24,22 @@ source ~/confbook/.bash_profile
 
 ### vim
 
-- Install Vundle:
-    ```
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    ```
 - Insert below to your ~/.vimrc
+
     ```
     source ~/confbook/.vimrc
     ```
 
+- Install Vundle and plugins:
+
+    ```
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall! +qall
+    ```
+
 ### tmux
 
-Insert below to your ~/.vimrc
+Insert below to your ~/.tmux.conf
 
 ```
 source-file ~/confbook/.tmux.conf
