@@ -2,10 +2,16 @@
 
 # User specific environment and startup programs
 export LANG=en_US.UTF-8
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export CLICOLOR=1
 export EDITOR=vim
 alias ll='ls -l'
 alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
+
+# Add PATHs
+for bin in /data/applications/*/bin ; do
+  PATH=$bin:$PATH
+done
+PATH=$HOME/.local/bin:$HOME/bin:$PATH
+export PATH
 
 [ -z $TMUX ] && tmux attach
