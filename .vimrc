@@ -147,6 +147,8 @@ endif
 autocmd BufRead,BufNewFile *.jsx setfiletype html
 " Syntax for template
 autocmd BufRead,BufNewFile *.jst setfiletype html
+" Syntax for conf
+autocmd BufRead,BufNewFile *.conf setfiletype conf
 
 " Enable syntax highlighting
 syntax enable
