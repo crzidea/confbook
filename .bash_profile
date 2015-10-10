@@ -11,7 +11,7 @@ alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
 for bin in /data/applications/*/bin ; do
   PATH=$bin:$PATH
 done
-PATH=$HOME/.local/bin:$HOME/bin:$PATH
+PATH=./node_modules/.bin:$HOME/.local/bin:$HOME/bin:$PATH
 export PATH
 
 [ -z $TMUX ] && tmux attach
