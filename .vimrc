@@ -69,7 +69,7 @@ nmap <leader>w :w!<cr>
 command! W w !sudo tee % > /dev/null
 
 " Use mouse
-set mouse=a
+"set mouse=a
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
