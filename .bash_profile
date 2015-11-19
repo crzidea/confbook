@@ -15,3 +15,9 @@ PATH=./node_modules/.bin:$HOME/.local/bin:$HOME/bin:$PATH
 export PATH
 
 [ -z $TMUX ] && tmux attach
+
+# Optimize NVM loading
+node --version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
