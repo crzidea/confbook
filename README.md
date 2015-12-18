@@ -44,3 +44,11 @@ Insert below to your ~/.tmux.conf
 ```
 source-file ~/confbook/.tmux.conf
 ```
+
+### ssh
+
+Link to your ~/.ssh/config
+
+```
+ln -s ~/confbook/ssh_config ~/.ssh/config
+```
