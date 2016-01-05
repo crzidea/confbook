@@ -6,3 +6,4 @@
    ControlPath /tmp/%r@%h:%p
    ControlPersist yes
    TCPKeepAlive yes
+   IdentityFile ~/.ssh/id_rsa
