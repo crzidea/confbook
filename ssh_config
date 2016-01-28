@@ -3,7 +3,7 @@
    SendEnv LANG LC_*
    Compression yes
    ControlMaster auto
-   ControlPath /tmp/%r@%h:%p
+   ControlPath ~/.ssh/.tmp_%r@%h:%p
    ControlPersist yes
    TCPKeepAlive yes
    IdentityFile ~/.ssh/id_rsa
