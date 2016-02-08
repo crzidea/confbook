@@ -52,3 +52,11 @@ Link to your ~/.ssh/config
 ```
 ln -s ~/confbook/ssh_config ~/.ssh/config
 ```
+
+### git
+
+Link to your /etc/gitconfig
+
+```
+sudo ln -s ~/confbook/gitconfig /etc/gitconfig
+```
