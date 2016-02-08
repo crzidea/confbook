@@ -37,6 +37,14 @@ source ~/confbook/.bash_profile
     vim +PluginInstall! +qall
     ```
 
+### editorconfig
+
+Link to your ~/.editorconfig
+
+```
+ln -s ~/confbook/.editorconfig ~/.editorconfig
+```
+
 ### tmux
 
 Insert below to your ~/.tmux.conf
