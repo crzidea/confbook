@@ -21,3 +21,5 @@ node --version >/dev/null 2>&1
 if [[ $? -ne 0 ]]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
+
+ssh-add >/dev/null 2>&1
