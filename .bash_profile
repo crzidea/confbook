@@ -28,9 +28,13 @@ export PATH
 
 # Optimize NVM loading
 node --version >/dev/null 2>&1
-if [[ $? -ne 0 ]]; then
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  nvm use stable
+if [[ $? -ne 0 && -s "$NVM_DIR/nvm.sh" ]]; then
+  # nvm is not compatible with the "PREFIX" environment variable
+  prefix_save=$PREFIX
+  unset PREFIX
+  source "$NVM_DIR/nvm.sh"  # This loads nvm
+  nvm use stable >/dev/null
+  PREFIX=$prefix_save
 fi
 
 ssh-add >/dev/null 2>&1
