@@ -1,5 +1,13 @@
 # .bash_profile
 
+# tmux need alias redefining
+alias ll='ls -l'
+alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   return
 fi
@@ -8,12 +16,6 @@ fi
 export LANG=en_US.UTF-8
 export CLICOLOR=1
 export EDITOR=vim
-alias ll='ls -l'
-alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"
 
 mkdir -p $HOME/.local
 export PREFIX=$HOME/.local
