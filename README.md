@@ -11,7 +11,7 @@ Just FYI.
 ## Install
 
 ```bash
-git clone https://github.com/crzidea/confbook.git ~/.confbook
+git clone https://github.com/crzidea/confbook.git ~/.confbook && ~/.confbook/install.sh
 ```
 
 ### bash
