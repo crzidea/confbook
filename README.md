@@ -11,7 +11,7 @@ Just FYI.
 ## Install
 
 ```bash
-git clone https://github.com/crzidea/confbook.git ~/confbook
+git clone https://github.com/crzidea/confbook.git ~/.confbook
 ```
 
 ### bash
@@ -19,7 +19,7 @@ git clone https://github.com/crzidea/confbook.git ~/confbook
 Insert below to your ~/.bash_profile
 
 ```
-source ~/confbook/.bash_profile
+source ~/.confbook/.bash_profile
 ```
 
 ### vim
@@ -27,7 +27,7 @@ source ~/confbook/.bash_profile
 - Insert below to your ~/.vimrc
 
     ```
-    source ~/confbook/.vimrc
+    source ~/.confbook/.vimrc
     ```
 
 - Install Vundle and plugins:
@@ -42,7 +42,7 @@ source ~/confbook/.bash_profile
 Link to your ~/.editorconfig
 
 ```
-ln -s ~/confbook/.editorconfig ~/.editorconfig
+ln -s ~/.confbook/.editorconfig ~/.editorconfig
 ```
 
 ### tmux
@@ -50,7 +50,7 @@ ln -s ~/confbook/.editorconfig ~/.editorconfig
 Insert below to your ~/.tmux.conf
 
 ```
-source-file ~/confbook/.tmux.conf
+source-file ~/.confbook/.tmux.conf
 ```
 
 ### ssh
@@ -58,7 +58,7 @@ source-file ~/confbook/.tmux.conf
 Link to your ~/.ssh/config
 
 ```
-ln -s ~/confbook/ssh_config ~/.ssh/config
+ln -s ~/.confbook/ssh_config ~/.ssh/config
 ```
 
 ### git
@@ -66,5 +66,5 @@ ln -s ~/confbook/ssh_config ~/.ssh/config
 Link to your /etc/gitconfig
 
 ```
-sudo ln -s ~/confbook/gitconfig /etc/gitconfig
+sudo ln -s ~/.confbook/gitconfig /etc/gitconfig
 ```
