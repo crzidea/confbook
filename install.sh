@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 CONFBOOK_DIR=$(cd `dirname $0`; pwd)
 function insert_line() {
   file=$1
