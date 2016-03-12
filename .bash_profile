@@ -2,6 +2,7 @@
 
 # tmux need alias redefining
 alias ll='ls -l'
+alias vi='vim'
 alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
