@@ -197,7 +197,7 @@ source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
 " 解决console输出乱码
-language messages en_US.utf-8
+"language messages en_US.utf-8
 
 " Modify font size on Mac
 if has('mac')
