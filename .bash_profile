@@ -16,7 +16,7 @@ else
   # run on ssh starting or in tmux with $TMUX_NEED_SOURCE
 
   # User specific environment and startup programs
-  export LANG=en_US.UTF-8
+  #export LANG=en_US.UTF-8
   export CLICOLOR=1
   export EDITOR=vim
 
