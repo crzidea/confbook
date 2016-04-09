@@ -9,6 +9,8 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+export NVM_DIR=$HOME/.nvm
+
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   # run in tmux
   return
@@ -57,6 +59,3 @@ else
   fi
 
 fi
-
-
-
