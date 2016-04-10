@@ -10,6 +10,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --userconfig=$HOME/.cnpmrc"
 
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/dist
+export NVM_DIR=$HOME/.nvm
 
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   # run in tmux
@@ -18,7 +19,6 @@ else
   # run on ssh starting or in tmux with $TMUX_NEED_SOURCE
 
   # User specific environment and startup programs
-  #export LC_ALL=en_US.UTF-8
   #export LANG=en_US.UTF-8
   export CLICOLOR=1
   export EDITOR=vim
@@ -60,4 +60,3 @@ else
   fi
 
 fi
-
