@@ -1,9 +1,4 @@
 # .bash_profile
-
-if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
-  return
-fi
-
 # User specific environment and startup programs
 export LANG=en_US.UTF-8
 export CLICOLOR=1
@@ -14,6 +9,14 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+
+alias docker-ps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
+alias docker-rm='docker rm --volumes'
+
+# Only load outside tmux
+if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
+  return
+fi
 
 mkdir -p $HOME/.local
 export PREFIX=$HOME/.local
