@@ -17,7 +17,8 @@ insert_line ~/.vimrc        "source $CONFBOOK_DIR/.vimrc"
 insert_line ~/.tmux.conf    "source-file $CONFBOOK_DIR/.tmux.conf"
 insert_line ~/.tmux.conf    "source-file $CONFBOOK_DIR/.tmux-v1.9.conf"
 
-     ln -s $CONFBOOK_DIR/.editorconfig  ~/.editorconfig
+     ln -s $CONFBOOK_DIR/.editorconfig  ~/
+     ln -s $CONFBOOK_DIR/.openssl.cnf   ~/
      ln -s $CONFBOOK_DIR/ssh_config     ~/.ssh/config
 sudo ln -s $CONFBOOK_DIR/gitconfig      /etc/gitconfig
 
