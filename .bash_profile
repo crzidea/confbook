@@ -38,6 +38,12 @@ else
     PATH=$bin:$PATH
   done
 
+  # Optimize NVM loading
+  if [[ -f ~/.nvmrc ]]; then
+    NODE_VERSION=`cat ~/.nvmrc`
+    PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
+  fi
+
   PATH=./node_modules/.bin:$PREFIX/bin:$HOME/bin:$PATH
   export PATH
 
@@ -51,18 +57,6 @@ else
     return
   else
     # no session exist
-
-    # Optimize NVM loading
-    node --version >/dev/null 2>&1
-    if [[ $? -ne 0 && -s "$NVM_DIR/nvm.sh" ]]; then
-      # nvm is not compatible with the "PREFIX" environment variable
-      prefix_save=$PREFIX
-      unset PREFIX
-      source "$NVM_DIR/nvm.sh"  # This loads nvm
-      nvm use stable >/dev/null
-      # restore PREFIX
-      PREFIX=$prefix_save
-    fi
 
     ssh-add >/dev/null 2>&1
   fi
