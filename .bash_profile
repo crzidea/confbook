@@ -1,7 +1,9 @@
 # .bash_profile
 # User specific environment and startup programs
 #export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/dist
-export NVM_DIR=$HOME/.nvm
+
+: ${NVM_DIR:=$HOME/.nvm}
+export NVM_DIR
 
 # tmux need alias redefining
 alias ll='ls -l'
