@@ -23,13 +23,6 @@ ln -s $CONFBOOK_DIR/.editorconfig ~/
 ln -s $CONFBOOK_DIR/.openssl.cnf  ~/
 ln -s $CONFBOOK_DIR/ssh_config    ~/.ssh/config
 
-# Add sudoer
-# Note: There are issues with this, DO NOT uncomment bellow lines.
-#group=$(groups | awk '{print $1}')
-#sudo insert_line /etc/sudoers.d/$USER "${group} ALL=(ALL) NOPASSWD:ALL"
-
-sudo ln -s $CONFBOOK_DIR/gitconfig /etc/gitconfig
-
 function clone_or_fetch() {
   url=$1
   dir=$2
@@ -50,3 +43,10 @@ vim +PluginInstall! +qall
 # Useful tools
 mkdir -p ~/.local
 clone_or_fetch https://github.com/crzidea/bin.git ~/.local/bin
+
+# Add sudoer
+# Note: There are issues with this, DO NOT uncomment bellow lines.
+#group=$(groups | awk '{print $1}')
+#sudo insert_line /etc/sudoers.d/$USER "${group} ALL=(ALL) NOPASSWD:ALL"
+
+sudo ln -s $CONFBOOK_DIR/gitconfig /etc/gitconfig
