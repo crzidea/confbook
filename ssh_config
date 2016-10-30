@@ -1,12 +1,12 @@
 # Merge this file into ~/.ssh/config or run `man ssh_config` for more info
+Host github.com
+  ControlPath none
+  TCPKeepAlive no
 Host *
   SendEnv LANG LC_*
   Compression yes
   ControlMaster auto
-  ControlPath /tmp/ssh_%r@%h:%p
+  ControlPath /tmp/ssh-%r@%h:%p
   ControlPersist yes
   TCPKeepAlive yes
   StrictHostKeyChecking no
-Host github.com
-  ControlPersist no
-  TCPKeepAlive no
