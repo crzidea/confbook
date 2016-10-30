@@ -3,7 +3,10 @@ Host *
   SendEnv LANG LC_*
   Compression yes
   ControlMaster auto
-  ControlPath ~/.ssh/.tmp_%r@%h:%p
+  ControlPath /tmp/ssh_%r@%h:%p
   ControlPersist yes
   TCPKeepAlive yes
   StrictHostKeyChecking no
+Host github.com
+  ControlPersist no
+  TCPKeepAlive no
