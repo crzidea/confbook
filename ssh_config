@@ -1,5 +1,8 @@
 # Merge this file into ~/.ssh/config or run `man ssh_config` for more info
-User git
+Host git.*
+  ControlPath none
+  TCPKeepAlive no
+Host github.*
   ControlPath none
   TCPKeepAlive no
 Host *
