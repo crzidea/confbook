@@ -12,4 +12,6 @@ Host *
   ControlPath /tmp/ssh-%r@%h:%p
   ControlPersist yes
   TCPKeepAlive yes
+  ServerAliveInterval 5
+  ServerAliveCountMax 1
   StrictHostKeyChecking no
