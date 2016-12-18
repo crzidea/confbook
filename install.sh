@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
+sex -x
+
 CONFBOOK_DIR=$(cd `dirname $0`; pwd)
 function insert_line() {
   file=$1
   line=$2
-  touch $file
+  sudo=$3
+  $sudo touch $file
   grep "$line" $file >/dev/null
   if [[ 1 -eq $? ]]; then
-    echo $line
-    echo $line >>$file
+    $sudo echo $line >>$file
   else
     echo "skip $line"
   fi
@@ -45,8 +47,7 @@ mkdir -p ~/.local
 clone_or_fetch https://github.com/crzidea/bin.git ~/.local/bin
 
 # Add sudoer
-# Note: There are issues with this, DO NOT uncomment bellow lines.
-#group=$(groups | awk '{print $1}')
-#sudo insert_line /etc/sudoers.d/$USER "${group} ALL=(ALL) NOPASSWD:ALL"
+#insert_line /etc/sudoers.d/$USER "${USER} ALL=(ALL) NOPASSWD:ALL" sudo
+echo "${USER} ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 
 sudo ln -s $CONFBOOK_DIR/gitconfig /etc/gitconfig
