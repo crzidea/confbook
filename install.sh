@@ -42,7 +42,7 @@ vim +PluginInstall! +qall
 
 # Useful tools
 mkdir -p ~/.local
-clone_or_fetch https://github.com/crzidea/bin.git ~/.local/bin
+clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local/bin
 
 # Add sudoer
 # Note: There are issues with this, DO NOT uncomment bellow lines.
