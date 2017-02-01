@@ -7,10 +7,10 @@ pgrep ssh-agent >/dev/null
 ssh_agent_not_alive=$?
 ssh_agent_path_prefix=ssh-agent-$USER
 if [[ 1 -eq $ssh_agent_not_alive ]]; then
-    rm /tmp/ssh-agent-$USER 2>/dev/null
-    ssh-agent -a /tmp/ssh-agent-$USER.sock >/tmp/ssh-agent-$USER.profile
+    rm $ssh_agent_path_prefix.* 2>/dev/null
+    ssh-agent -a $ssh_agent_path_prefix.sock >$ssh_agent_path_prefix.profile
 fi
-source /tmp/ssh-agent-$USER.profile >/dev/null
+source $ssh_agent_path_prefix.profile >/dev/null
 
 # You probably do not like to use `tmux`
 export TMUX_DO_NOT_ATTACH=1
