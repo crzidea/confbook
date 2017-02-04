@@ -5,11 +5,10 @@ CONFBOOK_DIR=$(cd `dirname $0`; pwd)
 function insert_line() {
   file=$1
   line=$2
-  sudo=$3
-  $sudo touch $file
+  touch $file
   grep "$line" $file >/dev/null
   if [[ 1 -eq $? ]]; then
-    $sudo echo $line >>$file
+    echo $line >>$file
   else
     echo "skip $line"
   fi
@@ -50,4 +49,4 @@ clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local/bin
 #insert_line /etc/sudoers.d/$USER "${USER} ALL=(ALL) NOPASSWD:ALL" sudo
 echo "${USER} ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 
-sudo ln -s $CONFBOOK_DIR/gitconfig /etc/gitconfig
+sudo cp -f $CONFBOOK_DIR/gitconfig /etc/gitconfig
