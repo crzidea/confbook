@@ -43,7 +43,7 @@ vim +PluginInstall! +qall
 
 # Useful tools
 mkdir -p ~/.local
-clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local/bin
+clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local-bin
 
 # Add sudoer
 #insert_line /etc/sudoers.d/$USER "${USER} ALL=(ALL) NOPASSWD:ALL" sudo
