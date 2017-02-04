@@ -46,7 +46,7 @@ else
     PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
   fi
 
-  PATH=./node_modules/.bin:$PREFIX/bin:$HOME/bin:$PATH
+  PATH=./node_modules/.bin:$PREFIX/bin:$HOME/.local-bin:$PATH
   export PATH
 
   tmux ls >/dev/null 2>&1
