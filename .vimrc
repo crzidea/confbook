@@ -296,8 +296,11 @@ map <leader>t<leader> :tabnext
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+"map <leader>cd :cd %:p:h<cr>:pwd<cr>
+map <leader>cd :cd %:p:h<cr>
 set autochdir
+" See: http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+autocmd BufEnter * silent! lcd %:p:h
 
 " Specify the behavior when switching between buffers
 try
