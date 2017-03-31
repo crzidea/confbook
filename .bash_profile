@@ -23,6 +23,8 @@ alias docker-rm='docker rm --volumes'
 
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   # run in tmux
+  # prevent overriding PATH on raspberry pi
+  export PATH=$_PATH
   return
 else
   # run on ssh starting or in tmux with $TMUX_NEED_SOURCE
@@ -35,19 +37,18 @@ else
   mkdir -p $HOME/.local
   export PREFIX=$HOME/.local
 
-  # Add PATHs
-  for bin in /data/applications/*/bin ; do
-    PATH=$bin:$PATH
-  done
-
   # Optimize NVM loading
   if [[ -f ~/.nvmrc ]]; then
     NODE_VERSION=`cat ~/.nvmrc`
     PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
   fi
 
+  # Add PATHs
   PATH=./node_modules/.bin:$PREFIX/bin:$HOME/.local-bin:$PATH
   export PATH
+
+  # backup PATH
+  export _PATH=$PATH
 
   tmux ls >/dev/null 2>&1
   TMUX_NO_SESSION=$?

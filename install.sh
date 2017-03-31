@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sex -x
+set -x
 
 CONFBOOK_DIR=$(cd `dirname $0`; pwd)
 function insert_line() {
