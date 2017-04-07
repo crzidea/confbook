@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-set -ex
-. /etc/os-release
-wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg| sudo apt-key add -
-echo "deb https://build.openvpn.net/debian/openvpn/stable $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/openvpn-aptrepo.list
