@@ -240,8 +240,8 @@ autocmd FileType lua setlocal shiftwidth=2 tabstop=2
 autocmd FileType sh setlocal shiftwidth=2 tabstop=2
 
 " Linebreak on 500 characters
-set lbr
-set tw=80
+"set nolbr
+"set tw=80
 
 set ai "Auto indent
 set si "Smart indent
