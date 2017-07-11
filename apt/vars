@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+#. /etc/os-release
+sudo apt install -y lsb-release apt-transport-https
+codename=`lsb_release -cs`
