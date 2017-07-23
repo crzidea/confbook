@@ -2,10 +2,6 @@
 set -ex
 . ./vars
 
-# docker-ce
-curl -sSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-echo "deb [arch=amd64,armhf] https://download.docker.com/linux/ubuntu $codename stable" | sudo tee /etc/apt/sources.list.d/docker.list
-
 # nodejs
 #curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 echo "deb $mirrors/deb.nodesource.com/node_8.x $codename main" | sudo tee /etc/apt/sources.list.d/nodesource.list
