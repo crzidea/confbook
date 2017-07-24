@@ -3,5 +3,5 @@ set -ex
 . ./vars
 
 # openvpn
-curl -sSL $mirrors/swupdate.openvpn.net/repos/repo-public.gpg | sudo apt-key add -
-echo "deb $mirrors/build.openvpn.net/debian/openvpn/stable $codename main" | sudo tee /etc/apt/sources.list.d/openvpn.list
+curl -sSL $mirrors/http/swupdate.openvpn.net/repos/repo-public.gpg | sudo apt-key add -
+echo "deb $mirrors/https/build.openvpn.net/debian/openvpn/stable $codename main" | sudo tee /etc/apt/sources.list.d/openvpn.list
