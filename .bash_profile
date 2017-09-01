@@ -11,7 +11,7 @@ alias vi='vim'
 alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
 alias mnpm="npm --registry=http://r.npm.sankuai.com \
   --cache=$HOME/.cache/mnpm \
-  --disturl=https://npm.sankuai.com/dist \
+  --disturl=http://npm.sankuai.com/dist \
   --userconfig=$HOME/.mnpmrc"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
