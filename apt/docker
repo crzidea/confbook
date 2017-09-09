@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
-set -ex
-. ./vars
+#set -ex
+#. ./vars
 
-# docker-ce
-curl -sSL https://download.docker.com/linux/$ID/gpg | sudo apt-key add -
-echo "deb https://download.docker.com/linux/$ID $codename stable" | sudo tee /etc/apt/sources.list.d/docker.list
+## docker-ce
+#curl -sSL https://download.docker.com/linux/$ID/gpg | sudo apt-key add -
+#echo "deb https://download.docker.com/linux/$ID $codename stable" | sudo tee /etc/apt/sources.list.d/docker.list
+
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
