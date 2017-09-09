@@ -42,7 +42,7 @@ clone_or_fetch https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall! +qall
 
 # Useful tools
-mkdir -p ~/.local
+mkdir -p ~/.local/etc
 clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local-bin
 
 # Add sudoer
