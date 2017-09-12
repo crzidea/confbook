@@ -2,7 +2,10 @@
 Host git.*
   ControlPath none
   TCPKeepAlive no
-Host github.*
+Host github.com
+  ControlPath none
+  TCPKeepAlive no
+Host gitlab.com
   ControlPath none
   TCPKeepAlive no
 Host *
