@@ -5,6 +5,8 @@
 : ${NVM_DIR:=$HOME/.nvm}
 export NVM_DIR
 
+export DOCKER_HOSTNAME=$HOSTNAME
+
 # tmux need alias redefining
 alias ll='ls -l'
 alias vi='vim'

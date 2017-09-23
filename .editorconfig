@@ -7,6 +7,10 @@ indent_style = space
 indent_size = 2
 jslint_happy = true
 
+[docker-compose.yml]
+indent_style = space
+indent_size = 2
+
 [**.{yml}]
 indent_style = space
 indent_size = 4
