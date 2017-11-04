@@ -3,13 +3,13 @@
 #   ./install-remote.sh server
 set -x
 ip=$1
-name=$2
+hostname=$2
 
 if [[ -f ~/.local/etc/ddns ]]; then
   . ~/.local/etc/ddns
   data='{"type":"A","name":"${name}","content":"${ip}","ttl":120,"proxied":false}'
   data=${data//$\{ip\}/$ip}
-  data=${data//$\{name\}/$name}
+  data=${data//$\{name\}/$hostname}
 
   curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records" \
        -H "X-Auth-Email: $auth_email" \
@@ -22,8 +22,8 @@ fi
 zoneinfo=`readlink /etc/localtime`
 ssh-copy-id root@$ip
 ssh root@$ip "
-hostname $name
-echo $name >/etc/hostname
+hostname $hostname
+echo $hostname >/etc/hostname
 ln -sf $zoneinfo /etc/localtime
 adduser --disabled-password --gecos '' $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
