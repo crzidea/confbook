@@ -2,21 +2,37 @@
 # Usage:
 #   ./install-remote.sh server
 set -x
-server=$1
+ip=$1
+name=$2
+
+if [[ -f ~/.local/etc/ddns ]]; then
+  . ~/.local/etc/ddns
+  data='{"type":"A","name":"${name}","content":"${ip}","ttl":120,"proxied":false}'
+  data=${data//$\{ip\}/$ip}
+  data=${data//$\{name\}/$name}
+
+  curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records" \
+       -H "X-Auth-Email: $auth_email" \
+       -H "X-Auth-Key: $auth_key" \
+       -H "Content-Type: application/json" \
+       --data $data
+  echo
+fi
+
 zoneinfo=`readlink /etc/localtime`
-ssh-copy-id root@$server
-ssh root@$server "
-hostname $server
-echo $server >/etc/hostname
+ssh-copy-id root@$ip
+ssh root@$ip "
+hostname $name
+echo $name >/etc/hostname
 ln -sf $zoneinfo /etc/localtime
 adduser --disabled-password --gecos '' $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
 cp -r .ssh /home/$USER
 chown -R $USER:$USER /home/$USER/.ssh
-apt update
-apt install -y git
+apt-get update
+apt-get install -y git
 "
-ssh $USER@$server "
+ssh $USER@$ip "
 git clone https://github.com/crzidea/confbook.git ~/.confbook
 ~/.confbook/install.sh
 "
