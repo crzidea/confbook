@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage:
-#   ./install-remote.sh server
+#   ./install-remote.sh ip hostname
 set -x
 ip=$1
 hostname=$2
