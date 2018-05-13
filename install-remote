@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage:
-#   ./install-remote.sh ip hostname
+#   ./install-remote ip hostname
 set -x
 ip=$1
 hostname=$2
@@ -34,5 +34,5 @@ apt-get install -y git
 "
 ssh $USER@$ip "
 git clone https://github.com/crzidea/confbook.git ~/.confbook
-~/.confbook/install.sh
+~/.confbook/install
 "
