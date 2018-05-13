@@ -8,5 +8,6 @@
 
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
-sudo apt install -y python-pip
+curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+python /tmp/get-pip.py --user
 pip install --user docker-compose
