@@ -19,20 +19,21 @@ if [[ -f ~/.local/etc/ddns ]]; then
   echo
 fi
 
-zoneinfo=`readlink /etc/localtime`
 ssh-copy-id root@$ip
 ssh root@$ip "
-hostname $hostname
-echo $hostname >/etc/hostname
-ln -sf $zoneinfo /etc/localtime
 adduser --disabled-password --gecos '' $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
 cp -r .ssh /home/$USER
 chown -R $USER:$USER /home/$USER/.ssh
-apt-get update
-apt-get install -y git
 "
+
+zoneinfo=`readlink /etc/localtime`
 ssh $USER@$ip "
+echo $hostname | sudo tee /etc/hostname
+sudo hostname $hostname
+sudo ln -sf $zoneinfo /etc/localtime
+sudo apt-get update
+sudo apt-get install -y git
 git clone https://github.com/crzidea/confbook.git ~/.confbook
 ~/.confbook/install
 "
