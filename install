@@ -38,7 +38,8 @@ function clone_or_fetch() {
 }
 
 # Install Vundle
-clone_or_fetch https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#clone_or_fetch https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+clone_or_fetch https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall! +qall
 
 # Useful tools
