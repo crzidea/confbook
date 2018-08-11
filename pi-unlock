@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Usage:
+#   ./pi-unlock ip password
+set -x
+ip=$1
+password=$2
+
+ssh pi@$ip "
+echo 'pi:$password' | sudo chpasswd
+echo 'root:$password' | sudo chpasswd
+echo 'PermitRootLogin yes' | sudo tee -a /etc/ssh/sshd_config
+sudo /etc/init.d/ssh restart
+"
