@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Usage:
+#   ./pi-lock ip
+set -x
+ip=$1
+
+ssh pi@$ip "
+sudo sed -i '/^PermitRootLogin yes$/d' /etc/ssh/sshd_config
+sudo /etc/init.d/ssh restart
+"
