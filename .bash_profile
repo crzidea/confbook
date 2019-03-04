@@ -1,9 +1,5 @@
 # .bash_profile
 # User specific environment and startup programs
-#export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/dist
-
-: ${NVM_DIR:=$HOME/.nvm}
-export NVM_DIR
 
 export DOCKER_HOSTNAME=$HOSTNAME
 
@@ -13,7 +9,7 @@ alias vi='vim'
 alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
 alias mnpm="npm --registry=http://r.npm.sankuai.com \
   --cache=$HOME/.cache/mnpm \
-  --disturl=http://nodejs.mirrors.mx.sankuai.com/dist \
+  --disturl=http://npm.sankuai.com/mirrors/node \
   --userconfig=$HOME/.mnpmrc"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
@@ -38,12 +34,6 @@ else
 
   mkdir -p $HOME/.local
   export PREFIX=$HOME/.local
-
-  # Optimize NVM loading
-  if [[ -f ~/.nvmrc ]]; then
-    NODE_VERSION=`cat ~/.nvmrc`
-    PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
-  fi
 
   # Add PATHs
   PATH=./node_modules/.bin:$PREFIX/bin:$HOME/.local-bin:$PATH
