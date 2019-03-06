@@ -11,10 +11,10 @@ Host gitlab.com
 Host *
   SendEnv LANG LC_*
   Compression yes
-  ControlMaster auto
+  #ControlMaster auto
   #ControlPath /tmp/ssh-%r@%h:%p
-  ControlPersist yes
+  #ControlPersist yes
   TCPKeepAlive yes
   ServerAliveInterval 5
   ServerAliveCountMax 1
-  StrictHostKeyChecking no
+  StrictHostKeyChecking accept-new
