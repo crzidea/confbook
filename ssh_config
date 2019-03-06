@@ -12,7 +12,7 @@ Host *
   SendEnv LANG LC_*
   Compression yes
   ControlMaster auto
-  ControlPath /tmp/ssh-%r@%h:%p
+  #ControlPath /tmp/ssh-%r@%h:%p
   ControlPersist yes
   TCPKeepAlive yes
   ServerAliveInterval 5
