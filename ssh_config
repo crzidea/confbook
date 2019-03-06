@@ -17,4 +17,4 @@ Host *
   TCPKeepAlive yes
   ServerAliveInterval 5
   ServerAliveCountMax 1
-  StrictHostKeyChecking accept-new
+  StrictHostKeyChecking ask
