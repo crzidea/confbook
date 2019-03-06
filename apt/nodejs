@@ -3,9 +3,10 @@ set -ex
 . ./vars
 
 # nodejs
-#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-echo "deb http://deb.nodesource.com/node_8.x $codename main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-echo "deb-src http://deb.nodesource.com/node_8.x $codename main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
+curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+
+#curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+#echo "deb http://deb.nodesource.com/node_8.x $codename main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+#echo "deb-src http://deb.nodesource.com/node_8.x $codename main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
 #echo "deb $mirrors/http/deb.nodesource.com/node_8.x $codename main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 #echo "deb-src $mirrors/http/deb.nodesource.com/node_8.x $codename main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list
