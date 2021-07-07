@@ -12,8 +12,8 @@ services:
       - SERVER_PORT=1443
       #- OPTIONS=--mtu 1397
       #- ARGS=--mtu 1397
-    sysctls:
-      - net.ipv4.ip_no_pmtu_disc=1
+    #sysctls:
+      #- net.ipv4.ip_no_pmtu_disc=1
     restart: always
   kcptun:
     image: xtaci/kcptun
