@@ -7,10 +7,6 @@ export DOCKER_HOSTNAME=$HOSTNAME
 alias ll='ls -l'
 alias vi='vim'
 alias hostip='ping -c 1 `hostname` | head -n 1 | grep -Eo "([0-9]+\.){3}[0-9]+"'
-alias mnpm="npm --registry=http://r.npm.sankuai.com \
-  --cache=$HOME/.cache/mnpm \
-  --disturl=http://npm.sankuai.com/mirrors/node \
-  --userconfig=$HOME/.mnpmrc"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
@@ -36,7 +32,7 @@ else
   export PREFIX=$HOME/.local
 
   # Add PATHs
-  PATH=./node_modules/.bin:$PREFIX/bin:$HOME/.local-bin:$PATH
+  PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:$PATH
   export PATH
 
   # backup PATH
