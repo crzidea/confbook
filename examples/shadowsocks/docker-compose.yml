@@ -1,0 +1,23 @@
+version: "3"
+services:
+  server:
+    image: shadowsocks/shadowsocks-libev
+    network_mode: host
+    #ports:
+      #- "1443:8388/tcp"
+      #- "1443:8388/udp"
+    environment:
+      - METHOD=aes-256-gcm
+      - PASSWORD=password
+      - SERVER_PORT=1443
+      #- OPTIONS=--mtu 1397
+      #- ARGS=--mtu 1397
+    #sysctls:
+      #- net.ipv4.ip_no_pmtu_disc=1
+    restart: always
+  kcptun:
+    image: xtaci/kcptun
+    command:
+      server --target "127.0.0.1:1443" --listen :5353 --crypt none --nocomp --quiet --dscp 46
+    network_mode: host
+    restart: always

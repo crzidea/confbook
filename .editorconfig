@@ -11,6 +11,10 @@ jslint_happy = true
 indent_style = space
 indent_size = 2
 
+[docker-stack.yml]
+indent_style = space
+indent_size = 2
+
 [**.{yml}]
 indent_style = space
 indent_size = 4
