@@ -502,6 +502,7 @@ Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+let g:snipMate = { 'snippet_version' : 1 }
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Bundle "justinj/vim-react-snippets"
