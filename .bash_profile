@@ -32,7 +32,7 @@ else
   export PREFIX=$HOME/.local
 
   # Add PATHs
-  PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:$PATH
+  PATH=$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:$PATH
   export PATH
 
   # backup PATH
