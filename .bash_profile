@@ -32,7 +32,10 @@ else
   export PREFIX=$HOME/.local
 
   # Add PATHs
-  PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:$PATH
+  export PYENV_ROOT="$HOME/.pyenv"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+  PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:/opt/homebrew/bin:$PATH
   export PATH
 
   # backup PATH
