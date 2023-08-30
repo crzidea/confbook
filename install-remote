@@ -29,6 +29,7 @@ chown -R $USER:$USER /home/$USER/.ssh
 
 zoneinfo=`readlink /etc/localtime`
 ssh $USER@$ip "
+echo 127.0.0.1 $hostname | sudo tee -a /etc/hosts
 echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 sudo ln -sf $zoneinfo /etc/localtime
