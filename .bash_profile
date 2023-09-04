@@ -32,7 +32,15 @@ else
   export PREFIX=$HOME/.local
 
   # Add PATHs
-  PATH=$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:$PATH
+  export PYENV_ROOT="$HOME/.pyenv"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  #eval "$(pyenv init -)"
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+  PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:/opt/homebrew/bin:$PATH
   export PATH
 
   # backup PATH
@@ -52,3 +60,4 @@ else
     ssh-add >/dev/null 2>&1
   fi
 fi
+
