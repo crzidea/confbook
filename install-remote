@@ -34,7 +34,7 @@ echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 sudo ln -sf $zoneinfo /etc/localtime
 sudo apt-get update
-sudo apt-get install -y git
+sudo apt-get install -y git tmux sshguard
 git clone https://github.com/crzidea/confbook.git ~/.confbook
 ~/.confbook/install
 "
