@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+#set -ex
+#. ./vars
+
+# https://developers.cloudflare.com/warp-client/get-started/linux/
+# Add cloudflare gpg key
+curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+
+# Add this repo to your apt repositories
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+
+# Install
+sudo apt-get update && sudo apt-get install cloudflare-warp
+
+# Add login IP to excluded route list
+echo $SSH_CONNECTION | sed 's/ .*//' | sed 's/[0-9]*$/0\/24/' | xargs warp-cli add-excluded-route
