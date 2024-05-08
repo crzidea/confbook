@@ -14,6 +14,8 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 
 alias docker-ps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
 alias docker-rm='docker rm --volumes'
+alias python='python3'
+alias pip='python3 -m pip'
 
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   # run in tmux
