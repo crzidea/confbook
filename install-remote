@@ -37,4 +37,6 @@ sudo apt-get update
 sudo apt-get install -y git tmux sshguard cron gnupg2 dnsutils
 git clone https://github.com/crzidea/confbook.git ~/.confbook
 ~/.confbook/install
+~/.confbook/apt/docker
+~/.confbook/apt/cloudflare-warp
 "
