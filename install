@@ -37,14 +37,17 @@ function clone_or_fetch() {
   git checkout HEAD
 }
 
-# Install Vundle
-#clone_or_fetch https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-clone_or_fetch https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall! +qall
+if [[ -z "$NO_INTERNET" ]]; then
+  # Install Vundle
+  clone_or_fetch https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall! +qall
 
-# Useful tools
+  # Useful tools
+  clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local-bin
+fi
+
 mkdir -p ~/.local/etc
-clone_or_fetch https://github.com/crzidea/local-bin.git ~/.local-bin
+
 
 # Add sudoer
 #insert_line /etc/sudoers.d/$USER "${USER} ALL=(ALL) NOPASSWD:ALL" sudo
