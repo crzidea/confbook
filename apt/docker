@@ -6,7 +6,7 @@
 #curl -sSL https://download.docker.com/linux/$ID/gpg | sudo apt-key add -
 #echo "deb https://download.docker.com/linux/$ID $codename stable" | sudo tee /etc/apt/sources.list.d/docker.list
 
-curl -sSL https://get.docker.com | sh
+#curl -sSL https://get.docker.com | sh
 curl -sSL https://mirrors.crzidea.com/https/get.docker.com | sh
 sudo usermod -aG docker $USER
 #curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
