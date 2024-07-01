@@ -22,7 +22,7 @@ fi
 ssh-copy-id root@$ip
 ssh root@$ip "
 apt-get update
-apt-get install -y git tmux sshguard cron gnupg2 dnsutils sudo
+apt-get install -y git tmux sshguard cron gnupg2 dnsutils sudo vim
 adduser --disabled-password --gecos '' $USER
 usermod -aG sudo $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
@@ -59,7 +59,9 @@ mkdir -p ~/.vim/bundle
 copy_git_repo ~/.vim/bundle/Vundle.vim
 
 ssh $USER@$ip "
+echo | sudo tee -a /etc/hosts
 echo 127.0.0.1 $hostname | sudo tee -a /etc/hosts
+echo ::1 $hostname | sudo tee -a /etc/hosts
 echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 sudo ln -sf $zoneinfo /etc/localtime
@@ -67,4 +69,5 @@ sudo ln -sf $zoneinfo /etc/localtime
 NO_INTERNET=1 ~/.confbook/install
 ~/.confbook/apt/docker
 ~/.confbook/apt/cloudflare-warp
+rm -r ~/git-bare
 "
