@@ -21,7 +21,10 @@ fi
 
 ssh-copy-id root@$ip
 ssh root@$ip "
+apt-get update
+apt-get install -y git tmux sshguard cron gnupg2 dnsutils sudo
 adduser --disabled-password --gecos '' $USER
+usermod -aG sudo $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
 cp -r .ssh /home/$USER
 chown -R $USER:$USER /home/$USER/.ssh
@@ -60,8 +63,6 @@ echo 127.0.0.1 $hostname | sudo tee -a /etc/hosts
 echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
 sudo ln -sf $zoneinfo /etc/localtime
-sudo apt-get update
-sudo apt-get install -y git tmux sshguard cron gnupg2 dnsutils
 #git clone https://github.com/crzidea/confbook.git ~/.confbook
 NO_INTERNET=1 ~/.confbook/install
 ~/.confbook/apt/docker
