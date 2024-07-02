@@ -22,7 +22,7 @@ warp-cli --accept-tos add-excluded-route 0.0.0.0/0
 warp-cli --accept-tos add-excluded-route ::/0
 warp-cli --accept-tos get-excluded-routes
 warp-cli --accept-tos dns fallback add engage.cloudflareclient.com
-warp-cli --accept-tos mode tunnel_only
+warp-cli --accept-tos mode warp
 warp-cli --accept-tos registration new
 #warp-cli --accept-tos connect
 #curl --interface CloudflareWARP https://api.ipify.org; echo
