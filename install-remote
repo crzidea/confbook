@@ -68,6 +68,7 @@ sudo ln -sf $zoneinfo /etc/localtime
 #git clone https://github.com/crzidea/confbook.git ~/.confbook
 NO_INTERNET=1 ~/.confbook/install
 ~/.confbook/apt/docker
-~/.confbook/apt/cloudflare-warp
+#~/.confbook/apt/cloudflare-warp
 rm -r ~/git-bare
+sudo passwd --lock root
 "
