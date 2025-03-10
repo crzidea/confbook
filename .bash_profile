@@ -2,6 +2,7 @@
 # User specific environment and startup programs
 
 export DOCKER_HOSTNAME=$HOSTNAME
+#export HF_ENDPOINT=https://hf-mirror.com
 
 # tmux need alias redefining
 alias ll='ls -l'
@@ -38,9 +39,9 @@ else
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   #eval "$(pyenv init -)"
 
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  #export NVM_DIR="$HOME/.nvm"
+  #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
   PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:/opt/homebrew/bin:$PATH
   export PATH
