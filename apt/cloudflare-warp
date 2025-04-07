@@ -17,7 +17,7 @@ mkdir -p ~/.local/share/warp
 echo yes > ~/.local/share/warp/accepted-tos.txt
 
 # Add login IP to excluded route list
-echo $SSH_CONNECTION | sed 's/ .*//' | xargs warp-cli --accept-tos add-excluded-route
+#echo $SSH_CONNECTION | sed 's/ .*//' | xargs warp-cli --accept-tos add-excluded-route
 #warp-cli --accept-tos add-excluded-route 0.0.0.0/0
 #warp-cli --accept-tos add-excluded-route ::/0
 #warp-cli --accept-tos get-excluded-routes
