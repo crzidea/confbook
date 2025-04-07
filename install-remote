@@ -41,7 +41,7 @@ mkdir -p ~/git-bare/$repo
 cd ~/git-bare/$repo
 git init --bare
 "
-  cd $repo
+  cd ~/$repo
   git_remote_name=host-$hostname
   git remote remove $git_remote_name
   git remote add $git_remote_name ssh://$USER@$ip/~/git-bare/$repo
@@ -53,10 +53,11 @@ rm -rf ~/git-bare/$repo
 "
 }
 
-copy_git_repo "~/.confbook"
-copy_git_repo "~/.local-bin"
+copy_git_repo .confbook
+copy_git_repo .local-bin
 #mkdir -p "~/.vim/bundle"
-copy_git_repo "~/.vim/bundle/Vundle.vim"
+copy_git_repo .vim/bundle/Vundle.vim
+
 
 ssh $USER@$ip "
 echo | sudo tee -a /etc/hosts
