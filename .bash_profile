@@ -18,6 +18,10 @@ alias docker-rm='docker rm --volumes'
 alias python='python3'
 alias pip='python3 -m pip'
 
+if [ "$TERM_PROGRAM" == "vscode" ]; then
+    TMUX_DO_NOT_ATTACH=1
+fi
+
 if [[ -n "$TMUX" && -z "$TMUX_NEED_SOURCE" ]]; then
   # run in tmux
   # prevent overriding PATH on raspberry pi
