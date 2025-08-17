@@ -22,7 +22,10 @@ insert_line ~/.tmux.conf  "source-file $CONFBOOK_DIR/.tmux-v1.9.conf"
 
 ln -s $CONFBOOK_DIR/.editorconfig ~/
 ln -s $CONFBOOK_DIR/.openssl.cnf  ~/
-ln -s $CONFBOOK_DIR/ssh_config    ~/.ssh/config
+
+cp ~/.ssh/config ~/.ssh/config.bak
+line_incloud_ssh_config="Include $CONFBOOK_DIR/ssh_config"
+echo "$line_incloud_ssh_config" | tee ~/.ssh/config
 
 function clone_or_fetch() {
   url=$1
