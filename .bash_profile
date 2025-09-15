@@ -18,6 +18,7 @@ alias docker-rm='docker rm --volumes'
 alias python='python3'
 alias pip='python3 -m pip'
 
+
 if [ "$TERM_PROGRAM" = "vscode" ]; then
     TMUX_DO_NOT_ATTACH=1
 fi
@@ -39,6 +40,11 @@ else
   export CLICOLOR=1
   export EDITOR=vim
 
+  unset PREFIX # nvm is not compatible with PREFIX
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
   mkdir -p $HOME/.local
   export PREFIX=$HOME/.local
 
@@ -46,10 +52,6 @@ else
   export PYENV_ROOT="$HOME/.pyenv"
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   #eval "$(pyenv init -)"
-
-  #export NVM_DIR="$HOME/.nvm"
-  #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
   PATH=./node_modules/.bin:$HOME/.deno/bin:$PREFIX/bin:$HOME/.local-bin:/opt/homebrew/bin:$PATH
   export PATH
