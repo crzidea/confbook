@@ -30,7 +30,7 @@ cp -r .ssh /home/$USER
 chown -R $USER:$USER /home/$USER/.ssh
 "
 
-zoneinfo=`readlink /etc/localtime`
+zoneinfo=`readlink /etc/localtime | sed 's/.*\/zoneinfo\///'`
 
 ssh $USER@$ip "rm -rf ~/git-bare/"
 
@@ -65,7 +65,7 @@ echo 127.0.0.1 $hostname | sudo tee -a /etc/hosts
 echo ::1 $hostname | sudo tee -a /etc/hosts
 echo $hostname | sudo tee /etc/hostname
 sudo hostname $hostname
-sudo ln -sf $zoneinfo /etc/localtime
+sudo timedatectl set-timezone $zoneinfo
 #git clone https://github.com/crzidea/confbook.git ~/.confbook
 NO_INTERNET=1 ~/.confbook/install
 ~/.confbook/apt/docker
