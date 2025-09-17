@@ -17,6 +17,7 @@ alias docker-ps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
 alias docker-rm='docker rm --volumes'
 alias python='python3'
 alias pip='python3 -m pip'
+alias gemini-commit='gemini -i "git commit"'
 
 
 if [ "$TERM_PROGRAM" = "vscode" ]; then
