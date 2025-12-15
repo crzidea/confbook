@@ -53,6 +53,10 @@ rm -rf ~/git-bare/$repo
 "
 }
 
+# Update local repositories
+(cd ~/.confbook && git pull)
+(cd ~/.local-bin && git pull)
+
 copy_git_repo .confbook
 copy_git_repo .local-bin
 #mkdir -p "~/.vim/bundle"
