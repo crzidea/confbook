@@ -6,7 +6,7 @@ function insert_line() {
   file=$1
   line=$2
   touch $file
-  grep "$line" $file >/dev/null
+  grep -F "$line" $file >/dev/null
   if [[ 1 -eq $? ]]; then
     echo $line >>$file
   else
@@ -20,24 +20,23 @@ insert_line ~/.vimrc      "source $CONFBOOK_DIR/.vimrc"
 insert_line ~/.tmux.conf  "source-file $CONFBOOK_DIR/.tmux.conf"
 insert_line ~/.tmux.conf  "source-file $CONFBOOK_DIR/.tmux-v1.9.conf"
 
-ln -s $CONFBOOK_DIR/.editorconfig ~/
-ln -s $CONFBOOK_DIR/.openssl.cnf  ~/
+ln -sf $CONFBOOK_DIR/.editorconfig ~/
+ln -sf $CONFBOOK_DIR/.openssl.cnf  ~/
 
 cp ~/.ssh/config ~/.ssh/config.bak
 line_incloud_ssh_config="Include $CONFBOOK_DIR/ssh_config"
-echo "$line_incloud_ssh_config" | tee ~/.ssh/config
+insert_line ~/.ssh/config "$line_incloud_ssh_config"
 
 function clone_or_fetch() {
   url=$1
   dir=$2
   if [[ -d $dir ]]; then
     cd $dir
-    git fetch origin
+    git pull
   else
     git clone $url $dir
     cd $dir
   fi
-  git checkout HEAD
 }
 
 if [[ -z "$NO_INTERNET" ]]; then

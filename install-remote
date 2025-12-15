@@ -47,8 +47,12 @@ git init --bare
   git remote add $git_remote_name ssh://$USER@$ip/~/git-bare/$repo
   git push --all $git_remote_name
   ssh $USER@$ip "
-rm -rf $repo
-git clone ~/git-bare/$repo $repo
+if [ -d $repo ]; then
+  cd $repo
+  git pull
+else
+  git clone ~/git-bare/$repo $repo
+fi
 rm -rf ~/git-bare/$repo
 "
 }
