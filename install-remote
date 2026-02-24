@@ -22,7 +22,7 @@ fi
 ssh-copy-id root@$ip
 ssh root@$ip "
 apt-get update
-apt-get install -y git tmux sshguard cron gnupg2 dnsutils sudo vim curl bash-completion rsync
+apt-get install -y git tmux sshguard cron gnupg2 dnsutils sudo vim curl bash-completion rsync lsb-release
 adduser --disabled-password --gecos '' $USER
 usermod -aG sudo $USER
 echo \"$USER ALL=(ALL) NOPASSWD:ALL\" >/etc/sudoers.d/$USER
